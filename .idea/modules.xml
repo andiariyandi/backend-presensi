@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/backend-presensi.iml" filepath="$PROJECT_DIR$/.idea/backend-presensi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/backend-lapkin-presensi.iml" filepath="$PROJECT_DIR$/.idea/backend-lapkin-presensi.iml" />
     </modules>
   </component>
 </project>

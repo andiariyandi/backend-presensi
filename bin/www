@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const app = require('../app');
-const debug = require('debug')('backend-presensi:server');
+const debug = require('debug')('backend-lapkin-presensi:server');
 const http = require('http');
 // const https = require('https');
 // const fs = require('fs');
