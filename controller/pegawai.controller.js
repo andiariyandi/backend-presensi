@@ -107,7 +107,7 @@ module.exports = {
         } else {
             const random = moment.now() + path.extname(req.file.originalname)
             const foto = global.appRoot + '/files/foto/' + random
-            const url = 'https://dev.pringsewukab.go.id/foto/' + random
+            const url = 'https://devsikagur.pringsewukab.go.id/foto/' + random
             fs.rename(req.file.path, foto, function (err) {
                 if (err) {
                     return res.json({
@@ -184,7 +184,7 @@ module.exports = {
         } else {
             const random = moment.now() + path.extname(req.file.originalname)
             const foto = global.appRoot + '/files/foto/' + random
-            const url = 'https://dev.pringsewukab.go.id/foto/' + random
+            const url = 'https://devsikagur.pringsewukab.go.id/foto/' + random
             fs.rename(req.file.path, foto, async function (err) {
                 if (err) {
                     return res.json({

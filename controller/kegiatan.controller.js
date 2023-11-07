@@ -91,7 +91,7 @@ module.exports = {
         } else {
             const random = moment.now() + path.extname(req.file.originalname)
             const foto = global.appRoot + '/files/bukti-kegiatan/' + random
-            const url = 'https://dev.pringsewukab.go.id/bukti-kegiatan/' + random
+            const url = 'https://devsikagur.pringsewukab.go.id/bukti-kegiatan/' + random
 
             fs.rename(req.file.path, foto, function (err) {
                 if (err) {
@@ -164,7 +164,7 @@ module.exports = {
         } else {
             const random = moment.now() + path.extname(req.file.originalname)
             const foto = global.appRoot + '/files/bukti-kegiatan/' + random
-            const url = 'https://dev.pringsewukab.go.id/bukti-kegiatan/' + random
+            const url = 'https://devsikagur.pringsewukab.go.id/bukti-kegiatan/' + random
 
             fs.rename(req.file.path, foto, function (err) {
                 if (err) {
