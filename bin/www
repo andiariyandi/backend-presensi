@@ -3,9 +3,9 @@
 const app = require('../app');
 const debug = require('debug')('backend-lapkin-presensi:server');
 const http = require('http');
-// const https = require('https');
-// const fs = require('fs');
-// const net = require('net');
+const https = require('https');
+const fs = require('fs');
+const net = require('net');
 
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
@@ -61,13 +61,12 @@ function onListening() {
     debug('Listening on ' + bind);
 }
 
-/*
+
 https.createServer({
-    key: fs.readFileSync('/etc/letsencrypt/live/dev.pringsewukab.go.id/privkey.pem'),
-    cert: fs.readFileSync('/etc/letsencrypt/live/dev.pringsewukab.go.id/fullchain.pem')
-}, app) 
-*/
-/*
+    key: fs.readFileSync('/etc/letsencrypt/live/devsikagur.pringsewukab.go.id/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/devsikagur.pringsewukab.go.id/fullchain.pem')
+}, app).listen(443); 
+
 net.createServer(socket => {
     socket.on("error", err => {
         console.log("Caught flash policy server socket error: " + err.message)
@@ -81,4 +80,3 @@ net.createServer(socket => {
     socket.write("</cross-domain-policy>\n")
     socket.end()
 }).listen(843) 
-*/
