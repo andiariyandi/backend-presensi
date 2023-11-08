@@ -62,21 +62,21 @@ function onListening() {
 }
 
 
-// https.createServer({
-//     key: fs.readFileSync('/etc/letsencrypt/live/devsikagur.pringsewukab.go.id/privkey.pem'),
-//     cert: fs.readFileSync('/etc/letsencrypt/live/devsikagur.pringsewukab.go.id/fullchain.pem')
-// }, app).listen(443); 
+https.createServer({
+    key: fs.readFileSync('/etc/letsencrypt/live/devsikagur.pringsewukab.go.id/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/devsikagur.pringsewukab.go.id/fullchain.pem')
+}, app).listen(443); 
 
-// net.createServer(socket => {
-//     socket.on("error", err => {
-//         console.log("Caught flash policy server socket error: " + err.message)
-//         console.log(err.stack)
-//     })
+net.createServer(socket => {
+    socket.on("error", err => {
+        console.log("Caught flash policy server socket error: " + err.message)
+        console.log(err.stack)
+    })
 
-//     socket.write("<?xml version=\"1.0\"?>\n")
-//     socket.write("<!DOCTYPE cross-domain-policy SYSTEM \"https://www.macromedia.com/xml/dtds/cross-domain-policy.dtd\">\n")
-//     socket.write("<cross-domain-policy>\n")
-//     socket.write("<allow-access-from domain=\"*\" to-ports=\"*\"/>\n")
-//     socket.write("</cross-domain-policy>\n")
-//     socket.end()
-// }).listen(843) 
+    socket.write("<?xml version=\"1.0\"?>\n")
+    socket.write("<!DOCTYPE cross-domain-policy SYSTEM \"https://www.macromedia.com/xml/dtds/cross-domain-policy.dtd\">\n")
+    socket.write("<cross-domain-policy>\n")
+    socket.write("<allow-access-from domain=\"*\" to-ports=\"*\"/>\n")
+    socket.write("</cross-domain-policy>\n")
+    socket.end()
+}).listen(843) 
